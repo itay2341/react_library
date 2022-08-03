@@ -1,0 +1,51 @@
+
+
+
+
+
+.main {
+    // background: linear-gradient(to right, #2c5364, #203a43);
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+        max-width: 300px;
+    }
+}
+
+.card {
+    max-width: 300px;
+    p{
+        padding-top: 1rem;
+        line-height: 150%;
+    }
+}
+
+
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .div2 img {
+        border-radius: 50%;
+        position: absolute;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: -1;
+    }
+    p {
+        font-style: bold;
+    }
+    .btn {
+        border: none;
+        background: #dfdeaa
+    }
+}
+
+.img:hover {
+    box-shadow: 10px 20px 3px rgba(34,34,0,0.5);
+}
+
+

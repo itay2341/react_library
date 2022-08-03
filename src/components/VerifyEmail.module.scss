@@ -1,0 +1,119 @@
+
+
+
+  
+  
+  .form {
+    margin: 17% auto;
+    text-align: center;
+    padding: 40px;
+    background: #F8A434;
+    font-family: 'Lato', sans-serif;
+    color: #FDFCFB;
+  }
+  
+  
+  .header {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  
+  .description {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+    margin: -2px 0 45px;
+  }
+  
+  
+  .input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .button {
+    height: 44px;
+    border: none;
+  }
+  
+    .button1 {
+        padding: 4px;
+        height: 44px;
+        width: 150px;
+        border: none;
+        width: 55%;
+        background: #FDFCFB;
+        font-family: inherit;
+        color: #737373;
+        letter-spacing: 1px;
+        text-indent: 5%;
+        border-radius: 5px 0 0 5px;
+    }
+    .button2 {
+        padding: 4px;
+        height: 44px;
+        width: 90px;
+        border: none;
+        width: 45%;
+        height: 46px;
+        background: #E86C8D;
+        background: #aa973788;
+        font-family: inherit;
+        font-weight: bold;
+        color: inherit;
+        letter-spacing: 1px;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+    
+  
+  .button2:hover {
+    background: #aa9737e6;
+
+  }
+  .button2:focus {
+    background: #aa9737;
+    border: none;
+  }
+  
+  .input input:focus {
+    outline: none;
+    border: 2px solid black;
+  }
+
+.outer {
+  position: relative;
+}
+  .error {
+    position: absolute;
+    opacity: 0;
+    display: flexbox;
+    bottom: 9px;
+    left: 17%;
+    color: red;
+    cursor: default;
+    i {
+      margin-right: 4px;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: -15%;
+    left: 5%;
+    padding: 4px;
+    width: 100px;
+    border: none;
+    height: 36px;
+    background: #95832ccb;
+    // font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }

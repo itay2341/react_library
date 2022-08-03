@@ -1,0 +1,49 @@
+
+
+
+
+.pic {
+    position: relative;
+    background: url('https://pxl-imperialacuk.terminalfour.net/fit-in/1079x305/prod01/channel_2/media/migration/administration-and-support-services/201204-anastasia-biochemistry-007_1625577057174_x4.jpg');
+    background-size: cover;
+    height:300px;
+    background-position: center;
+    div {
+        position: absolute;
+        bottom: 20%;
+        width: 100%;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn1 {
+    margin-right: 30px;
+    background: rgb(142, 176, 200);
+    width: 150px;
+    height: 50px;
+}
+.btn2 {
+    margin-right: 10px;
+    background: rgb(65, 62, 62);
+    width: 150px;
+    height: 50px;
+}
+
+.href {
+    text-decoration: none;
+}
+
+.infoBooks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .headerInfo {
+        text-decoration: none;
+    }
+}
+

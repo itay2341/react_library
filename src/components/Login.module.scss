@@ -1,0 +1,271 @@
+$yellow:#f5ba1a;
+$grey:#cccccc;
+
+
+.login {
+    overflow: hidden;
+    background: #f1f1f1;
+    padding: 40px 30px 30px 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+    -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+    transition: transform 300ms, box-shadow 300ms;
+    box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+    h1 {
+      margin-bottom: 30px;
+    }
+    i {
+      position: absolute;
+      right: 10%;
+      cursor: pointer;
+    }
+  }
+  .login::before, .login::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 40%;
+    z-index: -1;
+  }
+  .login::before {
+    left: 40%;
+    bottom: -110%;
+    background-color: rgba(69, 105, 144, 0.15);
+    -webkit-animation: wawes 6s infinite linear;
+    -moz-animation: wawes 6s infinite linear;
+    animation: wawes 6s infinite linear;
+  }
+  .login::after {
+    left: 35%;
+    bottom: -105%;
+    background-color: rgba(2, 128, 144, 0.2);
+    -webkit-animation: wawes 7s infinite;
+    -moz-animation: wawes 7s infinite;
+    animation: wawes 7s infinite;
+  }
+  
+  ::placeholder {
+    color: #2a78b8;
+    opacity: 1;
+  }
+  .login > input {
+    font-family: "Asap", sans-serif;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    color: #2a78b8; 
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    margin: 15px -10px;
+  }
+  .login > button {
+    font-family: "Asap", sans-serif;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 80px;
+    border: 0;
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 5px;
+    background-color: #656565;
+    // background-color: $yellow;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    transition: background-color 300ms;
+  }
+  .login > button:hover {
+    background-color: #f24353;
+    background-color: #f2b843;
+  }
+  
+  @-webkit-keyframes wawes {
+    from {
+      -webkit-transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes wawes {
+    from {
+      -moz-transform: rotate(0);
+    }
+    to {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @keyframes wawes {
+    from {
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .dropDown {
+    position: relative;
+  }
+  
+  .dropMenu {
+    position: absolute;
+    background-color: #f9f9f968;
+    text-align: center;
+    width: 200px;
+    left: -50px;
+    opacity: 0;
+    pointer-events: none;
+    // display: none;
+    // min-width: 158px;
+    transition: transform 1s ease-in-out;
+    z-index: 1;
+    a {
+      font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+  
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+  }
+  .dropDown {
+    i:hover .dropMenu {
+    // display: block;
+    pointer-events: all;
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  } 
+  .dropMenu:hover {
+    opacity: 1;
+  }
+
+
+  .regis {
+    padding: 20px 10px 0 0;
+    text-decoration: underline;
+    cursor: pointer;
+    span {
+      color: #ba800d;
+      text-decoration: underline;
+    }
+  }
+
+  .input_field {
+		position: relative;
+		margin-bottom: 20px ;
+        -webkit-animation: bounce 0.6s ease-out;
+  	     animation: bounce 0.6s ease-out;
+		>span {
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #333;
+			height: 100% ;
+			border-right: 1px solid $grey ;
+			text-align: center;
+			width: 30px;
+			>i {
+				padding-top: 10px;
+				padding-right: 3px;
+			}
+		}
+    input {
+      &[type="email"], &[type="password"] {
+        width: 100%;
+        padding: 8px 10px 9px 35px;
+        height: 35px;
+        border: 1px solid $grey;
+        box-sizing: border-box;
+        outline: none;
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        transition: all 0.30s ease-in-out;
+      }
+      &[type="email"]:hover, &[type="password"]:hover {
+        background: #ebebeb;
+      }
+      &[type="email"]:focus, &[type="password"]:focus {
+        -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+        border: 1px solid $yellow;
+        background: #fafafa;
+      }  
+	}
+}
+
+
+.btn {
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.home {
+  color: #3498db;
+}
+
+.home:hover{
+  color: #fff !important;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.home::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+
+.home:hover::before{
+  height: 180%;
+}

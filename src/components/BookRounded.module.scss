@@ -1,0 +1,29 @@
+
+
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+    margin: 0 20%;
+}
+
+.inner {
+    display: flex;
+}
+
+.item {
+    min-height: 30rem;
+    min-width: 20rem;
+    padding: 40px;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    pointer-events: none;
+}
+
+
+.ab {
+    position: absolute;
+}

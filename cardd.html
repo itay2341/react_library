@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary: #FFCE00;
+            --secondary: #FE4880;
+            --dark: #212121;
+            --light: #F3F3F3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: montserrat, sans-serif;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .card {
+            margin: 100px auto 0;
+            width: 200px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        .card__inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card__inner.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+
+        .card__face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .card__face__front {
+            background-image:url('https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/6060/9780606004206.jpg');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card__face__front button {
+            color: #FFF;
+            font-size: 32px;
+        }
+
+        .card__face__back {
+            background-color: var(--light);
+            transform: rotateY(180deg);
+        }
+
+        .card__content {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card__header {
+            position: relative;
+            padding: 10px 10px 10px;
+        }
+
+        .card__header h2 {
+            transform: translateY(-38%);
+        }
+
+        .card__header:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 25px;
+            background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+            z-index: -1;
+            border-radius: 0px 0px 50% 0px;
+        }
+
+        .pp {
+            display: block;
+            width: 128px;
+            height: 128px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            background-color: #FFF;
+            border: 5px solid #FFF;
+            object-fit: cover;
+        }
+
+        .card__header h2 {
+            color: #FFF;
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* .card__body {
+            padding: 30px;
+        } */
+
+        /* .card__body h3 {
+            color: var(--dark);
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        } */
+
+        .card__body p {
+            color: var(--dark);
+            font-size: 18px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card__inner">
+            <div class="card__face card__face__front">
+                <button>Read More</button>
+            </div>
+            <div class="card__face card__face__back">
+                <div class="card__content">
+                    <div class="card__header">
+                        <img src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/6060/9780606004206.jpg"
+                            alt="" class="pp" />
+                        <h2>Harri Poter</h2>
+                    </div>
+                    <div class="card__body">
+                        <p><strong>Harry Potter</strong> and the Deathly Hallows is a fantasy novel written by British
+                            author<br> <strong>J. K. Rowling</strong> and the seventh and final novel of the main Harry
+                            Potter series.</p>
+                        <button>Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const card = document.querySelector(".card__inner");
+
+        card.addEventListener("click", function (e) {
+            card.classList.toggle('is-flipped');
+        });
+    </script>
+</body>
+
+</html>
